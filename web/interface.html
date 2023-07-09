@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="eel.js"></script>
+    <script>
+                async function mainfc()
+        {
+            var plane_ip1;
+            var plane_ip2;
+            var max_ip;
+            var min_ip;
+            var step;
+            plane_ip1 = document.getElementById("plane_ip1").value;
+            plane_ip2 = document.getElementById("plane_ip2").value;
+            max_ip = document.getElementById("maxip").value;
+            min_ip = document.getElementById("minip").value;
+            step = document.getElementById("step").value;
+            eel.my_func(plane_ip1,plane_ip2, min_ip, max_ip, step)();
+        }
+
+    </script>
+    <title>ACL POOLER</title>
+</head>
+<body>
+        <h1>ACL POOLER</h1>
+        <div id="panel">
+        <div id="window">
+
+            <p id="text">Type script + ip in format 192.168.1.
+            Hotkey is ctrl+alt+j.</p>
+
+             <label for="plane_ip1">PRX</label>
+            <input type="text" id="plane_ip1">
+            <label for="plane_ip2">PSX</label>
+            <input type="text" id="plane_ip2">
+
+            </div>
+        <label for="minip">MIN HOST</label>
+        <input type="number" id="minip"  min ="0" max="255">
+
+            <label for="maxip">MAX HOST</label>
+        <input type="number" id="maxip"  min ="0" max="255">
+
+        <label for="step">STEP</label>
+        <input type="number" id="step" min = "1" max = "17">
+
+        <div id="bb"><button id="btn" onclick="mainfc()">Make ACL!</button></div>
+        </div>
+</body>
+</html>
